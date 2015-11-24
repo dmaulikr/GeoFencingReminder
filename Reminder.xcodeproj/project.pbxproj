@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AAF01911C05077C00CAFAA4 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF01901C05077C00CAFAA4 /* LocationManager.m */; };
+		1AAF01941C0507AA00CAFAA4 /* LocationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF01931C0507AA00CAFAA4 /* LocationControllerViewController.m */; };
 		1ACC7A351C03B4020045E970 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7A341C03B4020045E970 /* main.m */; };
 		1ACC7A381C03B4020045E970 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7A371C03B4020045E970 /* AppDelegate.m */; };
 		1ACC7A3B1C03B4020045E970 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7A3A1C03B4020045E970 /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		1ACC7A431C03B4020045E970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ACC7A411C03B4020045E970 /* LaunchScreen.storyboard */; };
 		1ACC7A4E1C03B4020045E970 /* ReminderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7A4D1C03B4020045E970 /* ReminderTests.m */; };
 		1ACC7A591C03B4020045E970 /* ReminderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7A581C03B4020045E970 /* ReminderUITests.m */; };
+		1ACC7A671C03B4D80045E970 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACC7A661C03B4D80045E970 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9883A51C042C9000E33B87 /* CodeChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeChallenge.h; sourceTree = "<group>"; };
+		1AAF018F1C05077C00CAFAA4 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		1AAF01901C05077C00CAFAA4 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		1AAF01921C0507AA00CAFAA4 /* LocationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationControllerViewController.h; sourceTree = "<group>"; };
+		1AAF01931C0507AA00CAFAA4 /* LocationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationControllerViewController.m; sourceTree = "<group>"; };
 		1ACC7A301C03B4020045E970 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACC7A341C03B4020045E970 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1ACC7A361C03B4020045E970 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,7 @@
 		1ACC7A541C03B4020045E970 /* ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ACC7A581C03B4020045E970 /* ReminderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReminderUITests.m; sourceTree = "<group>"; };
 		1ACC7A5A1C03B4020045E970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACC7A661C03B4D80045E970 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC7A671C03B4D80045E970 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,12 @@
 		1ACC7A271C03B4020045E970 = {
 			isa = PBXGroup;
 			children = (
+				1AAF018F1C05077C00CAFAA4 /* LocationManager.h */,
+				1AAF01901C05077C00CAFAA4 /* LocationManager.m */,
+				1AAF01921C0507AA00CAFAA4 /* LocationControllerViewController.h */,
+				1AAF01931C0507AA00CAFAA4 /* LocationControllerViewController.m */,
+				1A9883A51C042C9000E33B87 /* CodeChallenge.h */,
+				1ACC7A661C03B4D80045E970 /* MapKit.framework */,
 				1ACC7A321C03B4020045E970 /* Reminder */,
 				1ACC7A4C1C03B4020045E970 /* ReminderTests */,
 				1ACC7A571C03B4020045E970 /* ReminderUITests */,
@@ -207,6 +223,11 @@
 				TargetAttributes = {
 					1ACC7A2F1C03B4020045E970 = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1ACC7A481C03B4020045E970 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -270,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAF01911C05077C00CAFAA4 /* LocationManager.m in Sources */,
 				1ACC7A3B1C03B4020045E970 /* ViewController.m in Sources */,
+				1AAF01941C0507AA00CAFAA4 /* LocationControllerViewController.m in Sources */,
 				1ACC7A381C03B4020045E970 /* AppDelegate.m in Sources */,
 				1ACC7A351C03B4020045E970 /* main.m in Sources */,
 			);
@@ -413,10 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lynnkuhlman.Reminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reminder/Reminder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -424,10 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lynnkuhlman.Reminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reminder/Reminder-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -498,6 +526,7 @@
 				1ACC7A5F1C03B4020045E970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ACC7A601C03B4020045E970 /* Build configuration list for PBXNativeTarget "ReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +535,7 @@
 				1ACC7A621C03B4020045E970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1ACC7A631C03B4020045E970 /* Build configuration list for PBXNativeTarget "ReminderUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +544,7 @@
 				1ACC7A651C03B4020045E970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
