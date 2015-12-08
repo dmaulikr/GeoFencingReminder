@@ -60,6 +60,8 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app requires location services to work</string>
+	<key>NSLocationAlwaysAuthorized</key>
+	<string>This app needs the location services on even in the background</string>
 	<key>CFBundleDisplayName</key>
 	<string></string>
 	<key>LSApplicationCategoryType</key>
