@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reminder/ViewController.m"
-            timestampString = "470190751.529962"
+            timestampString = "472427096.5237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>

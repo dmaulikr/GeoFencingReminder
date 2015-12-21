@@ -12,13 +12,14 @@
 #import "LocationController.h"
 
 @import MapKit;
+@import Parse;
 
 @interface DetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *radiusTextField;
 
-//- (IBAction)createReminderButtonSelected:(UIButton *)sender;
+- (IBAction)createReminderButtonSelected:(UIButton *)sender;
 @end
 
 @implementation DetailViewController

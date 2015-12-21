@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LocationController.h"
 #import "DetailViewController.h"
+#import "Reminder.h"
 
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
@@ -23,7 +24,7 @@ PFLogInViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 
-
+@property (strong, nonatomic) NSArray *parseReminders;
 
 @end
 
@@ -45,8 +46,40 @@ PFLogInViewControllerDelegate>
     [self login];
     
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //query Parse for the data
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Reminder"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        
+        if (!error) {
+         NSLog(@"Successfully retrieved %lu parse reminders.", objects.count);
+         self.parseReminders = [[NSArray alloc] initWithArray:objects];
+         for( Reminder *reminder in self.parseReminders) {
+             CLLocationCoordinate2D location = CLLocationCoordinate2DMake(reminder.location.latitude, reminder.location.longitude);
+             if ([CLLocationManager isMonitoringAvailableForClass:[CLCircularRegion class]]) {
+                 // Create new region and start monitoring it.
+                 
+                 double dRadius = [reminder.radius doubleValue];
+                 
+                 CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:location radius:dRadius identifier:reminder.name];
+                 [[[LocationController sharedController]locationManager] startMonitoringForRegion: region];
+                 
+                 __weak typeof(self) weakSelf = self;
+                 
+                 [weakSelf.mapView addOverlay:[MKCircle circleWithCenterCoordinate: location radius: region.radius]];
+                 
+                 NSLog(@"%@", [[LocationController sharedController]locationManager]);
+             }
+         }
+         
+     } else {
+         // Print details for the error if there is one.
+         NSLog(@"Error: %@ %@", error, [error userInfo]);
+     }
+     }];
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
